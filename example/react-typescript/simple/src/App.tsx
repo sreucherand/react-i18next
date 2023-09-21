@@ -1,21 +1,18 @@
 import './i18n/config';
-import { useTranslation, Trans } from 'react-i18next';
+import i18next from 'i18next';
 
 function App() {
-  const { t } = useTranslation();
 
-  const count = 3;
+  const result1 = i18next.t('arrayJoin', { joinArrays: '+' });
+  // -> "line1+line2+line3"
 
-  return (
-    <div className="App">
-      <p>{t('title', { name: 'John' })}</p>
-      <p>{t('description.part1')}</p>
-      <p>{t('description.part2')}</p>
-      <Trans i18nKey="userMessagesUnread" count={count}>
-        You have {{ count }} unread message.
-      </Trans>
-    </div>
-  );
+  const result2 = i18next.t('arrayJoinWithInterpolation', { myVar: 'interpolate', joinArrays: ' ' });
+  // -> "you can interpolate"
+
+  const result3 = i18next.t('arrayOfObjects.0.name');
+  // -> "tom"
+
+  return null
 }
 
 export default App;

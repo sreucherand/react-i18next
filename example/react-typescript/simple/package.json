@@ -19,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "i18next-resources-for-ts": "i18next-resources-for-ts toc -i ./src/i18n/en -o ./src/@types/resources.ts"
+    "i18next-resources-for-ts": "i18next-resources-for-ts toc -i ./src/i18n/en -o ./src/@types/resources.ts",
+    "typechecks": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
