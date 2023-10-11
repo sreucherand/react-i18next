@@ -1,4 +1,4 @@
-{
+export const translation = {
   "arrayJoin": [
     "line1",
     "line2",
